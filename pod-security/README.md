@@ -45,6 +45,8 @@ NOTE: the `proc-mount` pod may execute as non-default values for `securityContex
 
 The tables below show each control specified in the [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) and the associated policies and mappings to test YAMLs.
 
+### Baseline/Default 
+
 <table>
 	<caption style="display:none">Baseline policy specification</caption>
 	<tbody>
