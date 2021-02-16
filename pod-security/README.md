@@ -45,7 +45,9 @@ NOTE: the `proc-mount` pod may execute as non-default values for `securityContex
 
 The tables below show each control specified in the [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) and the associated policies and mappings to test YAMLs.
 
-### Baseline/Default 
+### Baseline/Default
+
+The Baseline/Default policy is aimed at ease of adoption for common containerized workloads while preventing known privilege escalations. This policy is targeted at application operators and developers of non-critical applications. The following listed controls should be enforced/disallowed:
 
 <table>
 	<caption style="display:none">Baseline policy specification</caption>
