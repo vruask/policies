@@ -195,6 +195,7 @@ well as lower-trust users.The following listed controls should be enforced/disal
 		<tr>
 			<td><strong>Control</strong></td>
 			<td><strong>Policy</strong></td>
+			<td><strong>Test YAMLs</strong></td>
 		</tr>
 		<tr>
 			<td colspan="2"><em>Everything from the default profile.</em></td>
