@@ -11,4 +11,22 @@ spec:
     image: kubernetes/pause
     securityContext:
       privileged: true
-
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: privileged-container
+spec:
+  securityContext:
+    runAsNonRoot: true
+  initContainers:
+  - name: privileged-init-ctnr
+    image: busybox
+    command: ["sleep", "10"]
+    securityContext:
+      privileged: true
+  containers:
+  - name: privileged-ctnr
+    image: kubernetes/pause
+    securityContext:
+      privileged: true
