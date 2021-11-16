@@ -1,0 +1,17 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: policy-add-label
+spec:
+  validationFailureAction: enforce
+  rules:
+    - name: "Add a label"
+      match:
+        resources:
+          kinds:
+          - Pod
+      mutate:
+        patchesJson6902: |-
+          - path: "/metadata/labels"
+            op: add
+            value: {kyverno: success}          

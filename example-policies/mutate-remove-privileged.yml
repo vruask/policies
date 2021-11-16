@@ -1,0 +1,19 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: modify-pod-privs
+spec:
+  validationFailureAction: enforce
+  rules:
+  - name: "Modify privileged pods to unprivileged"
+    match:
+      resources:
+        kinds :
+          - Pod
+    mutate:
+      overlay:
+        spec:
+          containers:
+          - (name): "*"
+            securityContext:
+              allowPrivilegeEscalation: false
